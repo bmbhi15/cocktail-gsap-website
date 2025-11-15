@@ -6,17 +6,16 @@ import Menu from "./components/Menu";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import Cocktails from "./components/Cocktails";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      {/* <Hero />
+      <Hero />
+      <Cocktails />
       <About />
-      <Art />
+      {/* <Art />
       <Menu />
       <Contact /> */}
     </main>
