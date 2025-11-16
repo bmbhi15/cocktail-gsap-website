@@ -2,19 +2,18 @@
 import { cocktailLists, mockTailLists } from "../utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 const Cocktails = () => {
   useGSAP(() => {
-    const timeline1 = gsap.timeline({
+    const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#cocktails",
-        start: "top 20%",
+        start: "top 40%",
         end: "center 20%",
         scrub: true,
       },
     });
-    timeline1
+    timeline2
       .to(
         "#c-left-leaf",
         {
