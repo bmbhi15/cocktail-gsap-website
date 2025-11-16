@@ -7,6 +7,9 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import gsap from "gsap";
 import Cocktails from "./components/Cocktails";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Home() {
   return (

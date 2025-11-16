@@ -4,8 +4,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
-
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
