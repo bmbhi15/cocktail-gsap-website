@@ -12,33 +12,33 @@ const About = () => {
     const timeline1 = gsap.timeline({
       scrollTrigger: {
         trigger: "#about",
-        start: "top 50%",
+        start: "top 60%",
         end: "top top",
-        scrub: true,
+        scrub: 1.5,
       },
     });
     timeline1
       .from(paragraphSplit.lines, {
         opacity: 0,
         yPercent: 100,
-        ease: "power1.in",
-        stagger: 0.08,
+        stagger: 0.2,
+        duration: 2,
+        delay: 1,
       })
       .from(
         ".top-grid img",
         {
           opacity: 0,
-          yPercent: 100,
-          ease: "power1.inOut",
-          stagger: 0.04,
+          y: 10,
+          duration: 4,
+          delay: 2,
         },
         "=-0.5"
       )
       .from(".bottom-grid img", {
         opacity: 0,
-        yPercent: 100,
-        ease: "power1.inOut",
-        stagger: 0.04,
+        y: 10,
+        duration: 4,
       });
   }, []);
   return (

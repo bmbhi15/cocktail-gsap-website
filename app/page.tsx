@@ -18,8 +18,8 @@ export default function Home() {
       <Hero />
       <Cocktails />
       <About />
-      {/* <Art />
-      <Menu />
+      <Art />
+      {/* <Menu />
       <Contact /> */}
     </main>
   );

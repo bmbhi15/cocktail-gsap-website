@@ -61,6 +61,7 @@ const Hero = () => {
 
     if (!videoRef.current) return;
     const timeline = gsap.timeline({
+      defaults: { duration: 2.5 },
       scrollTrigger: {
         trigger: "video",
         start: "center 60%",
