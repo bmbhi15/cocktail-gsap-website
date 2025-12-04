@@ -19,13 +19,17 @@ const Art = () => {
       opacity: 0,
       stagger: 0.2,
     })
-      .to(".cocktail-img", {
-        scale: 1.1,
-        maskPosition: "center",
-        maskSize: "400%",
-        duration: 2,
-        ease: "power1.inOut",
-      })
+      .to(
+        ".cocktail-img",
+        {
+          scale: 1.1,
+          maskPosition: "center",
+          maskSize: "400%",
+          duration: 2,
+          ease: "power1.inOut",
+        },
+        "=-0.5"
+      )
       .to(".masked-content", {
         opacity: 1,
         duration: 1,
