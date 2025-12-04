@@ -19,8 +19,8 @@ export default function Home() {
       <Cocktails />
       <About />
       <Art />
-      {/* <Menu />
-      <Contact /> */}
+      <Menu />
+      {/* <Contact /> */}
     </main>
   );
 }
