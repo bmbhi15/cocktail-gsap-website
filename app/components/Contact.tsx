@@ -1,14 +1,34 @@
 "use client";
-import { useState } from "react";
-import { sliderLists } from "../utils/constants";
-import clsx from "clsx";
-import { StepBack, StepForward } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { SplitText } from "gsap/all";
-import { Instagram, Twitter, Facebook } from "lucide-react";
 
 const Contact = () => {
+  useGSAP(() => {
+    const timeline2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 20%",
+        end: "center 40%",
+        scrub: true,
+      },
+    });
+    timeline2
+      .to(
+        "#f-left-leaf",
+        {
+          y: -200,
+        },
+        0
+      )
+      .to(
+        "#f-right-leaf",
+        {
+          y: 200,
+        },
+        0
+      );
+  }, []);
+
   return (
     <section id="contact" className="noisy">
       <img
@@ -56,7 +76,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <img src="/images/footer-drinks.png" alt="Drinks" id="drink-img" />
+      <img src="/images/footer-drinks.png" alt="Drinks" className="drink-img" />
     </section>
   );
 };
