@@ -8,7 +8,7 @@ const Cocktails = () => {
     const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#cocktails",
-        start: "top 40%",
+        start: "top 10%",
         end: "center 20%",
         scrub: true,
       },
@@ -17,14 +17,14 @@ const Cocktails = () => {
       .to(
         "#c-left-leaf",
         {
-          y: -100,
+          y: -150,
         },
         0
       )
       .to(
         "#c-right-leaf",
         {
-          y: 100,
+          y: 200,
         },
         0
       );
