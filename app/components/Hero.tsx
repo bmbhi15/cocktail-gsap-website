@@ -64,9 +64,9 @@ const Hero = () => {
       defaults: { duration: 2.5 },
       scrollTrigger: {
         trigger: "video",
-        start: "center 60%",
+        start: "center 55%",
         end: "bottom top",
-        scrub: true,
+        scrub: 1.3,
         pin: true,
         invalidateOnRefresh: true,
       },

@@ -7,7 +7,7 @@ const Contact = () => {
     const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#contact",
-        start: "top 20%",
+        start: "top 10%",
         end: "center 40%",
         scrub: true,
       },
@@ -16,7 +16,7 @@ const Contact = () => {
       .to(
         "#f-left-leaf",
         {
-          y: -200,
+          x: 50,
         },
         0
       )
