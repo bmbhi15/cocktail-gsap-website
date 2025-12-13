@@ -44,7 +44,7 @@ const Menu = () => {
   }, [cocktail]);
   return (
     <section id="menu" className="noisy">
-      <img
+      {/* <img
         src="/images/slider-left-leaf.png"
         alt="Menu left leaf"
         id="m-left-leaf"
@@ -53,7 +53,7 @@ const Menu = () => {
         src="/images/slider-right-leaf.png"
         alt="Menu left leaf"
         id="m-right-leaf"
-      />
+      /> */}
       <div className="cocktail-tabs">
         {sliderLists.map((item) => (
           <button
@@ -96,7 +96,7 @@ const Menu = () => {
               {cocktail.name}
             </span>
           </div>
-          <div className={`details recipe-${cocktail.id}`}>
+          <div className={`details recipe-${cocktail.id} `}>
             <h2>{cocktail.title}</h2>
             <p>{cocktail.description}</p>
           </div>

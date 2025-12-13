@@ -52,7 +52,7 @@ const About = () => {
           </h2>
         </div>
         <div className="col-span-3" />
-        <div className="subcontent col-span-6 md:col-span-3">
+        <div className="subcontent col-span-6 lg:col-span-3">
           <p>
             {" "}
             Every cocktail we serve is a reflection of our obsession with detail
@@ -65,21 +65,21 @@ const About = () => {
         </div>
       </div>
       <div className="top-grid">
-        <div className="col-span-1 md:col-span-3">
+        <div className="col-span-1 lg:col-span-3">
           <img src="/images/abt1.png" alt="about 1" />
         </div>
-        <div className="col-span-1 md:col-span-3">
+        <div className="col-span-1 lg:col-span-3">
           <img src="/images/abt2.png" alt="about 2" />
         </div>
-        <div className="col-span-1 md:col-span-6">
+        <div className="col-span-1 lg:col-span-6">
           <img src="/images/abt5.png" alt="about 5" />
         </div>
       </div>
       <div className="bottom-grid">
-        <div className="col-span-1 md:col-span-8">
+        <div className="col-span-1 lg:col-span-8">
           <img src="/images/abt3.png" alt="about 1" />
         </div>
-        <div className="col-span-1 md:col-span-4">
+        <div className="col-span-1 lg:col-span-4">
           <img src="/images/abt4.png" alt="about 2" />
         </div>
       </div>
