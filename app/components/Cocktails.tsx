@@ -30,18 +30,20 @@ const Cocktails = () => {
       );
   }, []);
   return (
-    <section id="cocktails" className="noisy">
+    <section id="cocktails" className="noisy ">
       <img
         src="/images/cocktail-left-leaf.png"
         alt="Cocktail left leaf"
         id="c-left-leaf"
+        className="hidden md:block"
       />
       <img
         src="/images/cocktail-right-leaf.png"
         alt="Cocktail Right leaf"
         id="c-right-leaf"
+        className="hidden md:block"
       />
-      <div className="list">
+      <div className="list ">
         <div className="popular">
           <h2>Most Popular cocktails</h2>
           <ul>

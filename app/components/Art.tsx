@@ -38,8 +38,8 @@ const Art = () => {
   return (
     <section id="art">
       <h2 className="will-fade">The ART</h2>
-      <div className="content w-full px-auto md:px-40">
-        <ul className="flex flex-col will-fade space-y-4">
+      <div className="content w-full px-5 md:px-10 lg:px-40 ">
+        <ul className="flex flex-col will-fade space-y-4 ">
           {goodLists.map((item) => (
             <li key={item} className="flex flex-row space-x-4">
               <img alt="check-icon" src="/images/check.png" />
@@ -52,7 +52,7 @@ const Art = () => {
           src="/images/under-img.jpg"
           alt="under image"
         />
-        <ul className="flex flex-col will-fade space-y-4">
+        <ul className="flex flex-col will-fade space-y-4 ">
           {featureLists.map((item) => (
             <li key={item} className="flex flex-row space-x-4">
               <img alt="check-icon" src="/images/check.png" />
@@ -61,7 +61,7 @@ const Art = () => {
           ))}
         </ul>
       </div>
-      <div className="masked-container mt-10">
+      <div className="masked-container mt-10 ">
         <h2 className="will-fade">Sip-Worthy Perfection</h2>
         <div className="masked-content">
           <h3>Made with Craft, Poured with Passion</h3>

@@ -13,6 +13,7 @@
   --font-sans: "Mona Sans", sans-serif;
   --font-modern-negra: "Modern Negra", sans-serif;
   --font-serif: "DM Serif Text", serif;
+  --breakpoint-3xl: 1920px;
 }
 
 html,
@@ -48,8 +49,9 @@ body {
     circle at center,
     #434343 0%,
     #000 50%,
-    transparent 100%
+    transparent 30%
   );
+  z-index: 4;
 }
 
 @utility masked-img {
@@ -72,7 +74,7 @@ body {
     @apply fixed z-50 w-full;
 
     div {
-      @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
+      @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5  px-5 container mx-auto;
     }
 
     p {
@@ -89,7 +91,7 @@ body {
   }
 
   .noisy {
-    @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
+    @apply absolute inset-0 size-full bg-[url("/images/noise.png")] z-1;
   }
 
   #hero {
@@ -108,10 +110,10 @@ body {
     }
 
     .body {
-      @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5;
+      @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5 xl:px-10 3xl:px-5;
 
       .content {
-        @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
+        @apply flex md:flex-row flex-col w-full gap-10 justify-between md:items-end mx-auto;
 
         p:nth-of-type(2) {
           @apply font-modern-negra text-6xl text-yellow max-w-xl;
@@ -137,7 +139,7 @@ body {
   }
 
   video {
-    @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
+    @apply w-full md:h-[80%] h-1/2 absolute -bottom-10 left-0 md:object-contain object-bottom object-cover;
   }
 
   #cocktails {
@@ -152,7 +154,7 @@ body {
     }
 
     .list {
-      @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 2xl:px-0 px-5;
+      @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 3xl:px-0 px-10;
 
       .popular {
         @apply space-y-8 w-full md:w-fit;
@@ -189,7 +191,7 @@ body {
   }
 
   #about {
-    @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
+    @apply px-8 py-8 md:px-8 md:py-10 xl:px-12 xl:p-12 3xl:px-20 3xl:py-12 min-h-screen;
 
     .content {
       @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
@@ -232,7 +234,7 @@ body {
     }
 
     .bottom-grid {
-      @apply grid grid-cols-1 md:grid-cols-12 gap-5 md:px-0 px-5;
+      @apply grid grid-cols-1 lg:grid-cols-12 gap-5 lg:px-0 px-5;
 
       > div {
         @apply rounded-3xl overflow-hidden h-72 relative;
@@ -248,15 +250,15 @@ body {
     @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
 
     h2 {
-      @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8;
+      @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8 md:mb-80 lg:mb-8;
     }
 
     .content {
-      @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10;
+      @apply flex md:flex-row flex-col justify-between lg:mb-16 lg:mt-0 mt-40 gap-10;
     }
 
     .cocktail-img {
-      @apply md:w-[50vw] w-full h-[50vh] md:h-[60vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2;
+      @apply lg:w-[50vw] w-full h-[50vh] md:h-[50vh] lg:h-[60vh] rounded-4xl overflow-hidden absolute top-0 lg:top-1/2 lg:-translate-y-1/2 left-1/2 -translate-x-1/2;
     }
 
     .masked-container {
@@ -265,10 +267,10 @@ body {
       }
 
       div {
-        @apply opacity-0 md:px-0 px-5 space-y-5 absolute md:bottom-5 bottom-52 left-1/2 -translate-x-1/2;
+        @apply opacity-0 lg:px-0 px-5 space-y-5 absolute bottom-80 md:bottom-75 lg:bottom-5  left-1/2 -translate-x-1/2;
 
         h3 {
-          @apply md:text-5xl text-2xl text-center font-serif md:w-full w-80 text-white;
+          @apply md:text-5xl text-2xl text-center font-serif lg:w-full w-80 text-white;
         }
 
         p {
@@ -279,7 +281,7 @@ body {
   }
 
   #menu {
-    @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-10 radial-gradient;
+    @apply relative w-full px-10 -mt-30 lg:mt-40 md:-mt-20 py-0 lg:py-10 radial-gradient;
 
     #m-left-leaf {
       @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
@@ -333,14 +335,14 @@ body {
       }
 
       .details {
-        @apply space-y-5 md:max-w-md text-left;
+        @apply space-y-5 pr-30 md:pr-0 md:py-0 w-sm 2xl:w-md text-left;
 
         h2 {
-          @apply md:text-5xl text-3xl font-serif;
+          @apply text-3xl 2xl:text-5xl font-serif;
         }
 
         p {
-          @apply md:text-lg pe-5;
+          @apply text-sm 2xl:text-lg pe-5;
         }
       }
     }
@@ -350,18 +352,18 @@ body {
     @apply relative md:mt-20 mt-0 px-4 text-center w-full overflow-hidden radial-gradient;
 
     #f-left-leaf {
-      @apply absolute -bottom-30 -left-30 pointer-events-none lg:w-fit w-1/3;
+      @apply absolute bottom-0 -left-10  lg:-bottom-30 lg:-left-30 pointer-events-none lg:w-fit w-1/3;
     }
 
     #f-right-leaf {
-      @apply absolute top-0 right-0 pointer-events-none hidden lg:block;
+      @apply absolute -top-30 right-0 lg:top-0 lg:right-0 pointer-events-none hidden md:block;
     }
 
     .content {
-      @apply container mx-auto lg:py-14 2xl:py-32 py-16 flex flex-col justify-between gap-10 min-h-dvh;
+      @apply container mx-auto lg:py-14 2xl:py-32 py-16 flex flex-col justify-between gap-0 lg:gap-10 min-h-dvh;
 
       h2 {
-        @apply lg:text-6xl 2xl:text-8xl text-5xl font-modern-negra md:translate-y-0 translate-y-5;
+        @apply md:text-6xl 2xl:text-8xl text-5xl font-modern-negra md:translate-y-0 translate-y-5;
       }
 
       h3 {

@@ -64,8 +64,8 @@ const Hero = () => {
       defaults: { duration: 2.5 },
       scrollTrigger: {
         trigger: "video",
-        start: "center 55%",
-        end: "bottom top",
+        start: "center 60%",
+        end: "bottom 5%",
         scrub: 1.3,
         pin: true,
         invalidateOnRefresh: true,
@@ -79,7 +79,7 @@ const Hero = () => {
   }, []);
   return (
     <>
-      <section id="hero" className="noisy">
+      <section id="hero" className="noisy ">
         <h1 className="title">MOJITO</h1>
         <img
           src="/images/hero-left-leaf.png"
@@ -92,7 +92,7 @@ const Hero = () => {
           className="right-leaf"
         />
         <div className="body">
-          <div className="content">
+          <div className="content ">
             <div className="hidden lg:block space-y-4">
               <p className="subtitle">Cool Crisp Classic</p>
               <p className="subtitle text-left">
